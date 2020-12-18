@@ -10,8 +10,8 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0 100px;
-    background-color: 090C81;
+    padding: 0 40px;
+    background-color: #090C81;
     width: 100%;
     box-sizing: border-box;
 }
@@ -36,29 +36,34 @@ header nav ul li{
     position: relative;
     text-align: center;
     margin-right: 15px;
+    border-bottom: solid thin gray;
 }
 header nav ul li ul{
     position: absolute;
     left: 0;
     background: #333;
     display: none;
+    border: 2px solid yellow;
 }
 .menu-responsive-width-activo{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    width: 250px;/*mismo width sub menu*/
+    border: solid thin gray;
 }
 /*
 header nav ul li:hover ul{
     display: block;
 }*/
 header nav ul li ul li{
-    display: block;
-    width: 260px;
+    display: inline-block;
+    width: 250px;/*mismo width sub menu*/
 }
 header nav ul li a{
     height: 50px;
     line-height: 50px;
     padding: 0 20px;
-    color: yellow;
+    color: aquamarine;
     text-decoration: none;
     display: block;
 } 
@@ -82,8 +87,19 @@ i.fab,
     cursor: pointer;
     display: none;
 }
-
-
+.sub-menu-1,
+.sub-menu-2 {
+    background-color: #090C81;
+}
+.sub-menu-color-static {
+    background-color: #013ADF;
+    /* mismo color del hover en todo el menu  */
+}
+header nav ul li ul li:hover {
+    background-color: #04A0EA;
+    /* hover sub menu  */
+    color: black;
+}
 
 
 
@@ -126,7 +142,7 @@ i.fab,
     header nav ul li{
         display: block;
         text-align: justify;
-        border-bottom: 1px solid blue;
+        border-bottom: 1px solid gray;
         width: 100%;
     }
     header nav ul li a{
