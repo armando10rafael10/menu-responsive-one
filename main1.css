@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(ng2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    background-color: 090C81;
+    width: 100%;
+    box-sizing: border-box;
+}
+header .logo {
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    float: left;
+    font-weight: bold;
+}
+header nav {
+    float: right;
+}
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul li{
+    list-style: none;
+    position: relative;
+    text-align: center;
+    margin-right: 15px;
+}
+header nav ul li ul{
+    position: absolute;
+    left: 0;
+    background: #333;
+    display: none;
+}
+.menu-responsive-width-activo{
+    display: block;
+}
+/*
+header nav ul li:hover ul{
+    display: block;
+}*/
+header nav ul li ul li{
+    display: block;
+    width: 260px;
+}
+header nav ul li a{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: yellow;
+    text-decoration: none;
+    display: block;
+} 
+.oculto{
+    bottom:15px;
+    right: 1px;
+    position: absolute;
+    display: inline-block;
+}
+i.fas,
+i.fab,
+.fa-angle-down{
+    display: inline-block;
+    /*color: white;*/ /*color de letra*/
+}
+.menu-toggle{
+    color: #fff;
+    float: right;
+    line-height: 50px;
+    font-size:24px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+/*-------------  MEDIA QUERYS  ---------------------*/
+
+
+
+  
+@media (max-width: 991px){
+    body{
+        background: url(ng.jpg);
+    }
+    header{
+        padding: 0 20px;
+        background-color: #273053;/*fondo del logo*/
+    }
+    .menu-toggle{
+        display: block;
+    }
+    .menu-toggle .fa-bars{
+        display: block;
+        position: relative;
+        top:10px;
+        color: aqua;
+    }
+    header nav {
+        position:absolute;
+        display: block;
+        width: 60%;
+        height: calc(100vh-50px);
+        top : 50px;
+        left: -100%;
+        transition-duration: .5s;
+        transition-delay: .1s;
+    }
+    header nav ul{
+        display: block;
+        background-color: aliceblue;
+    }
+    header nav ul li{
+        display: block;
+        text-align: justify;
+        border-bottom: 1px solid blue;
+        width: 100%;
+    }
+    header nav ul li a{
+        display: block;
+        color: black;
+        font-size: 20px;
+    }
+    header nav ul li a:hover{
+        background-color: #068BCA; /* hover menu principal */
+        color: white;
+    }
+    header nav ul li ul{
+        position: relative;
+    }
+    header nav ul li ul li{
+        width: 100%;
+        height: 100%;
+        background-color:#3D3A3A;/* fondo sub menu gris */
+    }
+    header nav ul li ul li a{
+        color: aliceblue;
+    }
+    header nav ul li ul li a:hover{
+        background-color: #04A0EA;/* hover sub menu  */
+        color: black;
+    }
+    
+    i.fas,
+    i.fab{
+        display: inline-block;
+    }
+    .menu-responsive-active{
+        left: 0px;/*el efecto de movimiento del menu responsive*/
+        transition-duration: .5s;
+        transition-delay: .1s;
+    }
+    .menu-responsive-width-activo{
+        width: 100%;/*todo el width sub menu gris*/
+    }
+    .hide-submenu{
+        display: none;
+        background: white;
+    }
+    .oculto{
+      position: relative;
+      bottom:0px; /*la flecha oculta del sub menu*/
+    }
+    a{
+        display: inline-block;
+    }
+    .icon-flex-icon{
+        display: inline-block;
+        width: 10%; 
+/*        background-color: aqua;*/
+    }
+    .icon-flex-text{
+        display: inline-block;
+        width: 83%;
+/*        background-color: aqua;*/
+    }
+    .icon-flex-arrow{ 
+        display: inline-block;
+        width: 2%; 
+        font-size: 22px;
+/*        background-color: aqua;    */
+    }
+    .sub-menu-1 , .sub-menu-2{
+        background: white;
+    }
+    .sub-menu-color-static{
+        background-color: #068BCA;/* mismo color del hover en todo el menu  */
+    }
+    /*
+    .icon-color-home{
+        font-size: 18px; 
+        color:red;
+    }
+    .icon-color-option{
+        font-size: 18px; 
+        color:red;  
+    }
+    .icon-color-social{
+        color:red;  
+        font-size: 18px;
+    }
+    .icon-color-about{
+        font-size: 18px; 
+        color:red;
+    }
+    .icon-color-contact{
+        font-size: 18px; 
+        color:red;
+    }*/
+}
