@@ -36,14 +36,12 @@ header nav ul li{
     position: relative;
     text-align: center;
     margin-right: 15px;
-    border-bottom: solid thin gray;
 }
 header nav ul li ul{
     position: absolute;
     left: 0;
     background: #333;
     display: none;
-    border: 2px solid yellow;
 }
 .menu-responsive-width-activo{
     display: flex;
@@ -59,11 +57,16 @@ header nav ul li ul li{
     display: inline-block;
     width: 250px;/*mismo width sub menu*/
 }
+header nav ul li ul li:hover {
+    background-color: #04A0EA;
+    /* hover sub menu  */
+    color: black;
+}
 header nav ul li a{
     height: 50px;
     line-height: 50px;
     padding: 0 20px;
-    color: aquamarine;
+    color: #E0ECF8;
     text-decoration: none;
     display: block;
 } 
@@ -94,11 +97,6 @@ i.fab,
 .sub-menu-color-static {
     background-color: #013ADF;
     /* mismo color del hover en todo el menu  */
-}
-header nav ul li ul li:hover {
-    background-color: #04A0EA;
-    /* hover sub menu  */
-    color: black;
 }
 
 
